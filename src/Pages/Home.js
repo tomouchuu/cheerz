@@ -17,6 +17,7 @@ const ContentArea = styled.div`
   margin-top: 60px;
 `
 
+// @TODO: React Router this
 const Home = () => (
   <ContentArea>
     <Header>
