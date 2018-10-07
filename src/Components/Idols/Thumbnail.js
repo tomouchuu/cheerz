@@ -56,32 +56,32 @@ const IdolThumbnail = props => {
   if (props.size === 'lg') {
     return (
       <div>
-        <ThumbnailLink href={`artist/${props.id}`}>
+        <ThumbnailLink href={`artist/${props.artistid}`}>
           <ImageDiv hasvoice={props.hasvoice}>
-            <Image size={props.size} src={props.image} alt={props.name} />
+            <Image size={props.size} src={props.image} alt={props.artist} />
           </ImageDiv>
         </ThumbnailLink>
         <Unit unitid={props.unitid}><a href={`unit/${props.unitid}`}>{props.unit}</a></Unit>
-        <Link color="#f38ec3" href={`artist/${props.id}`}><Name>{props.name}</Name></Link>
+        <Link color="#f38ec3" href={`artist/${props.artistid}`}><Name>{props.artist}</Name></Link>
       </div>
     )
   }
 
   return (
-    <ThumbnailLink href={`artist/${props.id}`}>
+    <ThumbnailLink href={`artist/${props.artistid}`}>
       <ImageDiv hasvoice={props.hasvoice}>
-        <Image size={props.size} src={props.image} alt={props.name} />
+        <Image size={props.size} src={props.image} alt={props.artist} />
       </ImageDiv>
-      <Name>{props.name}</Name>
+      <Name>{props.artist}</Name>
     </ThumbnailLink>
   )
 };
 
 IdolThumbnail.propTypes = {
   /** Cheerz Idol ID */
-  id: PropTypes.number.isRequired,
+  artistid: PropTypes.number.isRequired,
   /** Idol Name */
-  name: PropTypes.string.isRequired,
+  artist: PropTypes.string.isRequired,
   /** Cheerz Unit ID */
   unitid: PropTypes.number,
   /** Unit Name */

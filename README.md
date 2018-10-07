@@ -11,7 +11,6 @@ It's been a very long time since I did a website rebuild and I found it immensel
 Bootstraped with Create React App, styled-components for styling and using React-Styleguidist for the style guide.
 
 ### Components TODO
-* Finish Homepage (Hero, Idols, Footer)
 * Router
 * Timeline Page (https://cheerz.cz/timeline)
 * Search Page (https://cheerz.cz/search?keyword=ao)
