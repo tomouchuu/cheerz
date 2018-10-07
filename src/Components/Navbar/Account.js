@@ -26,10 +26,6 @@ const ProfilePhoto = styled.div`
   width: 32px;
   height: 32px;
 
-  label {
-    
-  }
-
   img {
     vertical-align: middle;
     border: 0;
@@ -104,14 +100,14 @@ const MessageCount = styled.span`
   line-height: 15px;
 `;
 
-const AccountNavbar = props => (
+const AccountNavbar = (props) => (
   <Account>
     <AccountName>
       thom...
     </AccountName>
     <ProfilePhoto>
       <NotificationDot/>
-      <img alt="User" src="https://d1jo5b1m9v3ic.cloudfront.net/user/profile/u298960fd1fabaada9837b2feec5d27bc0dee1eb-small.jpg" />
+      <img alt="User" src={props.account.image} />
     </ProfilePhoto>
     <DropNav>
       <li>

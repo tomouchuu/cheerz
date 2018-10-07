@@ -73,7 +73,7 @@ const Navbar = props => (
     </Nav>
     <Search placeholder="アーティスト・ユニット検索" color="#f4f6f8" />
     {
-      props.account ? <AccountNavbar /> : <LoginLink color="#f38ec3" href="/login">LOGIN</LoginLink>
+      props.account ? <AccountNavbar account={props.account} /> : <LoginLink color="#f38ec3" href="/login">LOGIN</LoginLink>
     }
   </NavContainer>
 );
