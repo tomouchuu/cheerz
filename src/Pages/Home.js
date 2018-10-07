@@ -38,7 +38,7 @@ const IdolThumbnails = styled.ul`
 // @TODO: React Router this
 const Home = () => (
   <div>
-    <Hero issignedin />
+    <Hero />
     <Section>
       <SectionTitle>急上昇<SectionSubTitle>10分更新</SectionSubTitle></SectionTitle>
       <IdolThumbnails>
