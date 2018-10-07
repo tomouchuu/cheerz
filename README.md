@@ -12,9 +12,7 @@ Bootstraped with Create React App, styled-components for styling and using React
 
 ### Components TODO
 * Router
-* Timeline Page (https://cheerz.cz/timeline)
 * Search Page (https://cheerz.cz/search?keyword=ao)
-* Unit Pages (https://cheerz.cz/unit/728)
 * Idol Pages (https://cheerz.cz/artist/4940)
 * Icons
 * Ajax Calls (Timeline, Search, Etc.) (maybe graphql good to learn)

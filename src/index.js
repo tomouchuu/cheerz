@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 // import App from './App';
 import Home from './Pages/Home';
 import Timeline from './Pages/Timeline';
+import Unit from './Pages/Unit';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Timeline />, document.getElementById('root'));

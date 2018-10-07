@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styled from 'styled-components';
+import SupporterOnlyImg from './../../Images/supporter_only.png'
 
 const ItemArea = styled.div`
-  margin: 30px 0 0 0;
+  margin: 30px 15px 0 15px;
+  width: 220px;
 `;
 
 const ItemHead = styled.ul`
@@ -97,6 +99,29 @@ const Photo = styled.div`
       opacity: .5;
     }
 
+    :before {
+      content: '';
+      background: ${props => props.issupporter ? `url(${SupporterOnlyImg}) 0 0 no-repeat` : ''};
+      width: 150px;
+      height: 51px;
+      position: absolute;
+      top: calc(50% - 25px);
+      left: calc(50% - 75px);
+      display: block;
+      z-index: 1;
+    }
+
+    :after {
+      content: '';
+      background: ${props => props.issupporter ? 'rgba(0, 0, 0, 0.4)' : ''};
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
     img {
       object-fit: cover;
       width: 100%;
@@ -128,23 +153,23 @@ const Item = props => (
   <ItemArea data-item-id={props.itemid} data-posted-time={props.postedtime}>
     <ItemHead>
       <IdolThumb>
-        <a href={`/artist/${props.artistid}`}><img src="https://d1jo5b1m9v3ic.cloudfront.net/poster/profile/p271/da0132e2a7174c4cde8616e17a71b1ec-small.jpg" alt={props.artist} /></a>
+        <a href={`/artist/${props.artistid}`}><img src={props.smallimage} alt={props.artist} /></a>
       </IdolThumb>
       <IdolDetailArea>
-        <IdolUnit>
-          <a href={`/unit/${props.unitid}`}>{props.unit}</a>
-        </IdolUnit>
+        {
+          props.unitid !== 0 ? <IdolUnit><a href={`/unit/${props.unitid}`}>{props.unit}</a></IdolUnit> : ''
+        }
         <IdolName><a href={`/artist/${props.artistid}`}>{props.artist}</a></IdolName>
       </IdolDetailArea>
       <CheersCount id={`feedCheerCount${props.itemid}`}>{props.cheers}</CheersCount>
     </ItemHead>
 
     <ItemPhoto>
-      <div class="voiceIcon"></div>
-      <div class="itemInfo"></div>
-      <Photo>
-        <a href={`#item-${props.itemid}`} class="modal" data-item-id={props.itemid}>
-          <img src="https://d1jo5b1m9v3ic.cloudfront.net/item/i583119/s656352fbb51e24b9ac71f5b5db5485dffe15945-large.jpg" alt={`${props.artist} - ${props.comment}`} />
+      <div className="voiceIcon"></div>
+      <div className="itemInfo"></div>
+      <Photo issupporter={props.issupporter}>
+        <a href={`#item-${props.itemid}`} className="modal" data-item-id={props.itemid}>
+          <img src={props.image} alt={`${props.artist} - ${props.comment}`} />
         </a>
       </Photo>
     </ItemPhoto>
@@ -158,14 +183,17 @@ const Item = props => (
 
 Item.propTypes = {
   itemid: PropTypes.number,
-  postedtime: PropTypes.number,
+  smallimage: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  postedtime: PropTypes.number.isRequired,
   date: PropTypes.string,
-  artistid: PropTypes.number,
-  artist: PropTypes.string,
+  artistid: PropTypes.number.isRequired,
+  artist: PropTypes.string.isRequired,
   unitid: PropTypes.number,
   unit: PropTypes.string,
-  cheers: PropTypes.number,
-  comment: PropTypes.string
+  cheers: PropTypes.number.isRequired,
+  comment: PropTypes.string,
+  issupporter: PropTypes.bool
 }
 
 export default Item;
