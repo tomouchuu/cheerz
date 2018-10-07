@@ -3,9 +3,6 @@ import styled from 'styled-components';
 
 import MockData from './../MockData/Unit.json';
 
-import Header from './../Components/Utils/Header';
-import ContentArea from './../Components/Utils/Content';
-import Navbar from '../Components/Navbar';
 import UnitProfile from './../Components/Units/Profile';
 import UnitMember from './../Components/Units/Member';
 import { FeedSelect, FeedBtn } from './../Components/Feed';
@@ -43,10 +40,7 @@ class Unit extends React.Component {
 
   render() {
     return (
-      <ContentArea>
-        <Header>
-          <Navbar />
-        </Header>
+      <div>
         <UnitProfile
           unit={this.state.name}
           unitimg={this.state.image}
@@ -88,7 +82,7 @@ class Unit extends React.Component {
         <UnitTimelineContainer>
           <UnitTimeline />
         </UnitTimelineContainer>
-      </ContentArea>
+      </div>
     )
   }
 }

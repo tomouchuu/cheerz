@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import styled from 'styled-components';
+import { Link as RRLink, NavLink } from 'react-router-dom';
 
 import LogoImg from './../../Images/logo_CHEERZ.png';
 import Search from './../Search';
@@ -62,18 +64,18 @@ const LoginLink = styled(Link)`
  */
 const Navbar = props => (
   <NavContainer>
-    <Logo><a href="/">CHEERZ</a></Logo>
+    <Logo><RRLink to="/">CHEERZ</RRLink></Logo>
     <Nav>
       <ul>
-        <li><Link color="#f38ec3" href="/">HOME</Link></li>
-        <li><Link href="/timeline">タイムライン</Link></li>
-        <li><Link href="/ranking">ランキング</Link></li>
-        <li><Link href="/article">記事・コラム</Link></li>
+        <li><Link><NavLink exact to="/">HOME</NavLink></Link></li>
+        <li><Link><NavLink to="/timeline">タイムライン</NavLink></Link></li>
+        <li><Link><NavLink to="/ranking">ランキング</NavLink></Link></li>
+        <li><Link><NavLink to="/article">記事・コラム</NavLink></Link></li>
       </ul>
     </Nav>
     <Search placeholder="アーティスト・ユニット検索" color="#f4f6f8" />
     {
-      props.account ? <AccountNavbar account={props.account} /> : <LoginLink color="#f38ec3" href="/login">LOGIN</LoginLink>
+      props.account ? <AccountNavbar account={props.account} /> : <LoginLink color="#f38ec3"><RRLink to="/login">LOGIN</RRLink></LoginLink>
     }
   </NavContainer>
 );

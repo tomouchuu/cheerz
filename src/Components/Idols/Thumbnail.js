@@ -1,19 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link as RRLink } from 'react-router-dom';
 
 import styled from 'styled-components';
 
 import Link from '../Utils/Link';
 
 const ThumbnailLink = styled(Link)`
-  color: #f38ec3;
-  display: block;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-
-  :hover {
-    opacity: ${props => props.size === "lg" ? ".5" : "1"};
+  a {
+    color: #f38ec3;
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  
+    :hover {
+      opacity: ${props => props.size === "lg" ? ".5" : "1"};
+    }
   }
 `;
 const ImageDiv = styled.div`
@@ -56,23 +59,27 @@ const IdolThumbnail = props => {
   if (props.size === 'lg') {
     return (
       <div>
-        <ThumbnailLink href={`artist/${props.artistid}`}>
-          <ImageDiv hasvoice={props.hasvoice}>
-            <Image size={props.size} src={props.image} alt={props.artist} />
-          </ImageDiv>
+        <ThumbnailLink>
+          <RRLink to={`artist/${props.artistid}`}>
+            <ImageDiv hasvoice={props.hasvoice}>
+              <Image size={props.size} src={props.image} alt={props.artist} />
+            </ImageDiv>
+          </RRLink>
         </ThumbnailLink>
-        <Unit unitid={props.unitid}><a href={`unit/${props.unitid}`}>{props.unit}</a></Unit>
-        <Link color="#f38ec3" href={`artist/${props.artistid}`}><Name>{props.artist}</Name></Link>
+        <Unit unitid={props.unitid}><RRLink to={`unit/${props.unitid}`}>{props.unit}</RRLink></Unit>
+        <Link color="#f38ec3"><RRLink to={`artist/${props.artistid}`}><Name>{props.artist}</Name></RRLink></Link>
       </div>
     )
   }
 
   return (
-    <ThumbnailLink href={`artist/${props.artistid}`}>
-      <ImageDiv hasvoice={props.hasvoice}>
-        <Image size={props.size} src={props.image} alt={props.artist} />
-      </ImageDiv>
-      <Name>{props.artist}</Name>
+    <ThumbnailLink>
+      <RRLink to={`artist/${props.artistid}`}>
+        <ImageDiv hasvoice={props.hasvoice}>
+          <Image size={props.size} src={props.image} alt={props.artist} />
+        </ImageDiv>
+        <Name>{props.artist}</Name>
+      </RRLink>
     </ThumbnailLink>
   )
 };

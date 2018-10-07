@@ -12,6 +12,7 @@ Bootstraped with Create React App, styled-components for styling and using React
 
 ### Components TODO
 * Router
+* Convert things into the global stylesheet
 * Search Page (https://cheerz.cz/search?keyword=ao)
 * Idol Pages (https://cheerz.cz/artist/4940)
 * Icons

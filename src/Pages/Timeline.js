@@ -3,9 +3,6 @@ import styled from 'styled-components';
 
 import MockData from './../MockData/Timeline.json';
 
-import Header from './../Components/Utils/Header';
-import ContentArea from './../Components/Utils/Content';
-import Navbar from '../Components/Navbar';
 import { FeedSelect, FeedBtn } from './../Components/Feed';
 import Item from '../Components/Idols/Item';
 
@@ -58,10 +55,7 @@ class Timeline extends React.Component {
 
   render() {
     return (
-      <ContentArea>
-        <Header>
-          <Navbar />
-        </Header>
+      <div>
         <FeedSelect>
           <FeedBtn href="#" selected>すべて</FeedBtn>
           <FeedBtn href="#" data-key="favorite" data-value="1">お気に入り</FeedBtn>
@@ -101,7 +95,7 @@ class Timeline extends React.Component {
             </PickupBox>
           </PickupArea>
         </Container>
-      </ContentArea>
+      </div>
     )
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link as RRLink } from 'react-router-dom';
 
 import styled from 'styled-components';
 import SupporterOnlyImg from './../../Images/supporter_only.png'
@@ -153,13 +154,13 @@ const Item = props => (
   <ItemArea data-item-id={props.itemid} data-posted-time={props.postedtime}>
     <ItemHead>
       <IdolThumb>
-        <a href={`/artist/${props.artistid}`}><img src={props.smallimage} alt={props.artist} /></a>
+        <RRLink to={`/artist/${props.artistid}`}><img src={props.smallimage} alt={props.artist} /></RRLink>
       </IdolThumb>
       <IdolDetailArea>
         {
-          props.unitid !== 0 ? <IdolUnit><a href={`/unit/${props.unitid}`}>{props.unit}</a></IdolUnit> : ''
+          props.unitid !== 0 ? <IdolUnit><RRLink to={`/unit/${props.unitid}`}>{props.unit}</RRLink></IdolUnit> : ''
         }
-        <IdolName><a href={`/artist/${props.artistid}`}>{props.artist}</a></IdolName>
+        <IdolName><RRLink to={`/artist/${props.artistid}`}>{props.artist}</RRLink></IdolName>
       </IdolDetailArea>
       <CheersCount id={`feedCheerCount${props.itemid}`}>{props.cheers}</CheersCount>
     </ItemHead>
@@ -168,9 +169,9 @@ const Item = props => (
       <div className="voiceIcon"></div>
       <div className="itemInfo"></div>
       <Photo issupporter={props.issupporter}>
-        <a href={`#item-${props.itemid}`} className="modal" data-item-id={props.itemid}>
+        <RRLink to={`#item-${props.itemid}`} className="modal" data-item-id={props.itemid}>
           <img src={props.image} alt={`${props.artist} - ${props.comment}`} />
-        </a>
+        </RRLink>
       </Photo>
     </ItemPhoto>
 
