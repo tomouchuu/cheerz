@@ -43,6 +43,7 @@ class UnitTimeline extends React.Component {
               postedtime={post.item.posted_time}
               artistid={post.poster.poster_id}
               artist={post.poster.name}
+              artistimage={post.poster.s_image_url}
               unitid={post.poster.group[0].group_id}
               unit={post.poster.group[0].name}
               cheers={post.item.cheer_count}

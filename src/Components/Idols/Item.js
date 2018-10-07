@@ -154,7 +154,7 @@ const Item = props => (
   <ItemArea data-item-id={props.itemid} data-posted-time={props.postedtime}>
     <ItemHead>
       <IdolThumb>
-        <RRLink to={`/artist/${props.artistid}`}><img src={props.smallimage} alt={props.artist} /></RRLink>
+        <RRLink to={`/artist/${props.artistid}`}><img src={props.artistimage} alt={props.artist} /></RRLink>
       </IdolThumb>
       <IdolDetailArea>
         {
@@ -190,6 +190,7 @@ Item.propTypes = {
   date: PropTypes.string,
   artistid: PropTypes.number.isRequired,
   artist: PropTypes.string.isRequired,
+  artistimage: PropTypes.string.isRequired,
   unitid: PropTypes.number,
   unit: PropTypes.string,
   cheers: PropTypes.number.isRequired,
