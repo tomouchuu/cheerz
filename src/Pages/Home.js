@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Hero from './../Components/Hero';
-import IdolThumbnail from './../Components/Idols/Thumbnail';
+import IdolThumbnail from './../Components/Idol/Thumbnail';
 import Footer from './../Components/Footer';
 
 const Section = styled.section`

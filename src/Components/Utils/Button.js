@@ -5,22 +5,14 @@ import styled from 'styled-components';
  * Master Button style
  */
 export const Button = styled.a`
-  text-decoration: none;
-
   display: block;
   text-align: center;
   color: #f38ec3;
 
-  transition: all 0.3s ease;
-  cursor: pointer;
   border: 3px solid #f38ec3;
   padding: 10px 36px;
   font-weight: 400;
   border-radius: 22px;
-
-  :hover {
-    opacity: .5;
-  }
 `;
 
 export const SubmitBtn = styled(Button)`
@@ -37,6 +29,21 @@ export const SubmitBtn = styled(Button)`
   pointer-events: ${props => props.off ? 'none' : 'auto'};
   background: ${props => props.off ? '#cbd1d8' : 'linear-gradient(to right, #f38ec3, #f26687)'};
   opacity: ${props => props.off ? '.8' : '1'};
+`;
+
+export const MoreBtn = styled.div`
+  margin: 10px 0 0;
+  text-align: right;
+  
+  a {
+    text-align: center;
+    border-radius: 20px;
+    color: #8995a3;
+    border: 2px solid #cbd1d8;
+    display: inline-block;
+    padding: 1px 10px;
+    font-size: 10px;
+  }
 `;
 
 // Button.propTypes = {

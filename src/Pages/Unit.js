@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import MockData from './../MockData/Unit.json';
+import MockUnitData from './../MockData/Unit.json';
+import MockTimelineData from './../MockData/UnitTimeline.json';
 
-import UnitProfile from './../Components/Units/Profile';
-import UnitMember from './../Components/Units/Member';
+import UnitProfile from './../Components/Unit/Profile';
+import UnitMember from './../Components/Unit/Member';
 import { FeedSelect, FeedBtn } from './../Components/Feed';
-import UnitTimeline from '../Components/Units/Timeline';
+import Timeline from '../Components/Timeline';
 
 const UnitMembers = styled.div`
   margin: 30px 0 0;
@@ -30,12 +31,23 @@ class Unit extends React.Component {
       name: '',
       image: '',
       url: '',
-      members: []
+      members: [],
+      feed: {
+        posts: []
+      }
     }
   }
 
   componentDidMount() {
-    this.setState(MockData);
+    this.setState(MockUnitData, () => {
+      const results = MockTimelineData.Result.items;
+      this.setState({
+        ...this.state,
+        feed: {
+          posts: results
+        }
+      })
+    });
   }
 
   render() {
@@ -80,7 +92,7 @@ class Unit extends React.Component {
           <FeedBtn href="#" data-key="poster_ids" data-value="[4941]">rio yamamoto</FeedBtn>
         </FeedSelect>
         <UnitTimelineContainer>
-          <UnitTimeline />
+          <Timeline posts={this.state.feed.posts} />
         </UnitTimelineContainer>
       </div>
     )

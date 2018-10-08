@@ -6,14 +6,7 @@ import styled from 'styled-components';
  */
 const Link = styled.span`
   a {
-    cursor: pointer;
     color: ${props => props.color || '#bcc6cf'};
-    text-decoration: none;
-    transition: all 0.3s ease;
-  
-    :hover {
-      opacity: 0.5;
-    }
   
     &.active {
       color: #f38ec3;

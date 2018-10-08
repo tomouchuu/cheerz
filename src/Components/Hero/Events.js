@@ -42,10 +42,6 @@ const Event = styled.a`
   vertical-align: baseline;
   background: transparent;
   color: #8995a3;
-  text-decoration: none;
-
-  transition: all 0.3s ease;
-  cursor: pointer;
 
   .title {
     display: flex;

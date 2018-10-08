@@ -86,19 +86,12 @@ const Photo = styled.div`
   }
 
   a {
-    transition: all 0.3s ease;
-    cursor: pointer;
-
     display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-
-    :hover {
-      opacity: .5;
-    }
 
     :before {
       content: '';

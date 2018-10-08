@@ -11,9 +11,7 @@ It's been a very long time since I did a website rebuild and I found it immensel
 Bootstraped with Create React App, styled-components for styling and using React-Styleguidist for the style guide.
 
 ### Components TODO
-* Router
-* Convert things into the global stylesheet
 * Search Page (https://cheerz.cz/search?keyword=ao)
-* Idol Pages (https://cheerz.cz/artist/4940)
+* Convert things into the global stylesheet
 * Icons
 * Ajax Calls (Timeline, Search, Etc.) (maybe graphql good to learn)

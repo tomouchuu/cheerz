@@ -15,15 +15,6 @@ const MemberThumbnail = styled.div`
   border-radius: 50%;
   overflow: hidden;
 
-  a {
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-decoration: none;
-    :hover {
-      opacity: .5;
-    }
-  }
-
   img {
     object-fit: cover;
     width: 100%;
@@ -42,12 +33,6 @@ const MemberName = styled.p`
 
   a {
     color: #f38ec3;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-decoration: none;
-    :hover {
-      opacity: .5;
-    }
   }
 `;
 const MemberRomanji = styled.p`
@@ -63,8 +48,6 @@ const MemberExtra = styled.p`
 
 const FavouriteBtn = styled.a`
   margin: 5px 0 0;
-  transition: all 0.3s ease;
-  cursor: pointer;
   text-align: center;
   border-radius: 30px;
   display: inline-block;
@@ -73,11 +56,6 @@ const FavouriteBtn = styled.a`
   border: none;
   background: linear-gradient(to right, #f38ec3, #f26687);
   color: #fff;
-  text-decoration: none;
-
-  :hover {
-    opacity: .5;
-  }
 `;
 
 const MemberStats = styled.ul`

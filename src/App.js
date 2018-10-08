@@ -12,14 +12,7 @@ import Navbar from './Components/Navbar';
 import Home from './Pages/Home';
 import Timeline from './Pages/Timeline';
 import Unit from './Pages/Unit';
-
-import { createGlobalStyle } from 'styled-components'
-
-const GlobalStyle = createGlobalStyle`
-  a {
-    text-decoration: none;
-  }
-`;
+import Artist from './Pages/Artist';
 
 const App = () => (
   <Router>
@@ -31,8 +24,7 @@ const App = () => (
       <Route exact path="/" component={Home} />
       <Route path="/timeline" component={Timeline} />
       <Route path="/unit/:id" component={Unit} />
-
-      <GlobalStyle />
+      <Route path="/artist/:id" component={Artist} />
     </ContentArea>
   </Router>
 )

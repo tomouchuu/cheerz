@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { Link as RRLink } from 'react-router-dom';
 import Link from './../Utils/Link';
 
 import AppstoreImg from './../../Images/dl_appstore.png';
@@ -31,8 +32,6 @@ const FooterAppDl = styled.ul`
 const DownloadLink = styled.a`
   display: block;
   text-indent: -9999px;
-  transition: all 0.3s ease;
-  cursor: pointer;
 
   height: 30px;
   background-position: 0 0;
@@ -83,13 +82,13 @@ const Footer = props => (
 
       <FooterLinkArea>
         <FooterLinks>
-          <li><Link color="#8995a3" href="/about">ABOUT CHEERZ</Link></li>
-          <li><Link color="#8995a3" href="/contact">お問い合わせ</Link></li>
-          <li><Link color="#8995a3" href="/faq">FAQ</Link></li>
-          <li><Link color="#8995a3" href="/term">利用規約</Link></li>
-          <li><Link color="#8995a3" href="/privacy">プライバシーポリシー</Link></li>
-          <li><Link color="#8995a3" href="/shikinkessaihou">資金決済法に基づく表記</Link></li>
-          <li><Link color="#8995a3" href="/tokusho">特商法に基づく表記</Link></li>
+          <li><Link color="#8995a3"><RRLink to="/about">ABOUT CHEERZ</RRLink></Link></li>
+          <li><Link color="#8995a3"><RRLink to="/contact">お問い合わせ</RRLink></Link></li>
+          <li><Link color="#8995a3"><RRLink to="/faq">FAQ</RRLink></Link></li>
+          <li><Link color="#8995a3"><RRLink to="/term">利用規約</RRLink></Link></li>
+          <li><Link color="#8995a3"><RRLink to="/privacy">プライバシーポリシー</RRLink></Link></li>
+          <li><Link color="#8995a3"><RRLink to="/shikinkessaihou">資金決済法に基づく表記</RRLink></Link></li>
+          <li><Link color="#8995a3"><RRLink to="/tokusho">特商法に基づく表記</RRLink></Link></li>
         </FooterLinks>
         <CopyrightTxt>©CHEERZ</CopyrightTxt>
       </FooterLinkArea>
