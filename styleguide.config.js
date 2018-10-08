@@ -28,7 +28,7 @@ module.exports = {
         'src/Components/Idol/Hero.js',
         'src/Components/Fan/FanSidebar.js',
         'src/Components/Community/CommunitySidebar.js',
-        'src/Components/Supporter/index.js',
+        'src/Components/Supporter/*.js',
       ]
     },
     {
