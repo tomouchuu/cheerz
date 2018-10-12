@@ -13,6 +13,7 @@ import Home from './Pages/Home';
 import Timeline from './Pages/Timeline';
 import Unit from './Pages/Unit';
 import Artist from './Pages/Artist';
+import Search from './Pages/Search';
 
 const App = () => (
   <Router>
@@ -25,6 +26,7 @@ const App = () => (
       <Route path="/timeline" component={Timeline} />
       <Route path="/unit/:id" component={Unit} />
       <Route path="/artist/:id" component={Artist} />
+      <Route path="/search/:keyword" component={Search} />
     </ContentArea>
   </Router>
 )

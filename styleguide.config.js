@@ -12,6 +12,7 @@ module.exports = {
       components: [
         'src/Components/Footer/*.js',
         'src/Components/Idol/Thumbnail.js',
+        'src/Components/Unit/Thumbnail.js',
         'src/Components/Navbar/*.js',
         'src/Components/Search/*.js',
         'src/Components/Timeline/*.js',
