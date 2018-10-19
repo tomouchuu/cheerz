@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Hero from './../Components/Hero';
 import IdolThumbnail from './../Components/Idol/Thumbnail';
@@ -39,7 +40,7 @@ const Home = () => (
   <div>
     <Hero issignedin />
     <Section>
-      <SectionTitle>急上昇<SectionSubTitle>10分更新</SectionSubTitle></SectionTitle>
+      <SectionTitle><FontAwesomeIcon icon="heart" /> 急上昇<SectionSubTitle>10分更新</SectionSubTitle></SectionTitle>
       <IdolThumbnails>
         <li>
           <IdolThumbnail artistid={4940} artist="ao yamato" image="https://d1jo5b1m9v3ic.cloudfront.net/poster/profile/p4940/db7db9f905bfa9d8b69c454d81b922e4-large.jpg" />
@@ -62,7 +63,7 @@ const Home = () => (
       </IdolThumbnails>
     </Section>
     <Section>
-      <SectionTitle>声が聞ける</SectionTitle>
+      <SectionTitle><FontAwesomeIcon icon="volume" />声が聞ける</SectionTitle>
       <IdolThumbnails>
         <li>
           <IdolThumbnail artistid={4940} artist="ao yamato" image="https://d1jo5b1m9v3ic.cloudfront.net/poster/profile/p4940/db7db9f905bfa9d8b69c454d81b922e4-large.jpg" hasvoice />

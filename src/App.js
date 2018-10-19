@@ -5,6 +5,11 @@ import {
   Route
 } from 'react-router-dom';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faClock, faCrown, faFlag, faHeart, faHome, faNewspaper, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faQuestionCircle } from '@fortawesome/pro-regular-svg-icons';
+import { faVolume } from '@fortawesome/pro-solid-svg-icons';
+
 import Header from './Components/Utils/Header';
 import ContentArea from './Components/Utils/Content';
 import Navbar from './Components/Navbar';
@@ -14,6 +19,8 @@ import Timeline from './Pages/Timeline';
 import Unit from './Pages/Unit';
 import Artist from './Pages/Artist';
 import Search from './Pages/Search';
+
+library.add(faClock, faCrown, faFlag, faHeart, faHome, faNewspaper, faQuestionCircle, faSearch, faVolume);
 
 const App = () => (
   <Router>

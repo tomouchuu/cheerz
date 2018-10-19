@@ -36,5 +36,8 @@ module.exports = {
       name: 'Unit Page',
       components: 'src/Components/Unit/*.js'
     }
-  ]
+  ],
+  styleguideComponents: {
+    Wrapper: path.join(__dirname, 'src/styleguide-wrapper'),
+  }
 }

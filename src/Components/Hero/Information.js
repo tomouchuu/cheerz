@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import Button from './../Utils/Button';
 
 const InfoList = styled.ul`
@@ -75,7 +77,7 @@ const Information = props => (
     <li>
       <BonusPoints>
         <InfoTitle>
-          <h3>TODAY'S BONUS<span><a href="/faq#faqcat10">ICON</a></span></h3>
+          <h3>TODAY'S BONUS<span><a href="/faq#faqcat10"><FontAwesomeIcon icon={["far", "question-circle"]} /></a></span></h3>
         </InfoTitle>
         <BonusPointsInfo>
           1件のお気に入り投稿がありました（1pt）<br/>

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link as RRLink, NavLink } from 'react-router-dom';
 
 import LogoImg from './../../Images/logo_CHEERZ.png';
@@ -67,10 +68,10 @@ const Navbar = props => (
     <Logo><RRLink to="/">CHEERZ</RRLink></Logo>
     <Nav>
       <ul>
-        <li><Link><NavLink exact to="/">HOME</NavLink></Link></li>
-        <li><Link><NavLink to="/timeline">タイムライン</NavLink></Link></li>
-        <li><Link><NavLink to="/ranking">ランキング</NavLink></Link></li>
-        <li><Link><NavLink to="/article">記事・コラム</NavLink></Link></li>
+        <li><Link><NavLink exact to="/"><FontAwesomeIcon icon="home" /> HOME</NavLink></Link></li>
+        <li><Link><NavLink to="/timeline"><FontAwesomeIcon icon="clock" /> タイムライン</NavLink></Link></li>
+        <li><Link><NavLink to="/ranking"><FontAwesomeIcon icon="crown" /> ランキング</NavLink></Link></li>
+        <li><Link><NavLink to="/article"><FontAwesomeIcon icon="newspaper" /> 記事・コラム</NavLink></Link></li>
       </ul>
     </Nav>
     <Search placeholder="アーティスト・ユニット検索" color="#f4f6f8" />

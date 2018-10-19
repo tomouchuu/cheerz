@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 const EventsArea = styled.div`
   flex: 1 1 auto;
   margin: ${props => props.issignedin ? '0 0 0 60px;' : '38px auto 0;'};
@@ -59,7 +61,7 @@ const Event = styled.a`
 const Events = props => (
   <EventsArea issignedin={props.issignedin}>
     <EventTitle>
-      <h3>EVENT</h3>
+      <h3><FontAwesomeIcon icon="flag" /> EVENT</h3>
       <a href="/ranking">MORE</a>
     </EventTitle>
     <EventList>
