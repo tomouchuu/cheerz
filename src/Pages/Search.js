@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import MockSearchUnitData from './../MockData/SearchUnit.json';
 import MockSearchArtistData from './../MockData/SearchArtist.json';
 
+import Breadcrumb from './../Components/Utils/Breadcrumb';
 import UnitThumbnail from './../Components/Unit/Thumbnail';
 import IdolThumbnail from './../Components/Idol/Thumbnail';
 
@@ -66,7 +67,7 @@ class Search extends React.Component {
     render() {
         return (
             <div>
-                BREADCRUMBS
+                <Breadcrumb />
                 <Container>
                     <SearchResultsSection>
                         <SectionTitle>ユニット（10）</SectionTitle>
