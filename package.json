@@ -14,9 +14,9 @@
     "react-styleguidist": "^7.3.9"
   },
   "scripts": {
-    "start:styleguidist": "npx styleguidist server",
+    "start:docs": "npx styleguidist server",
     "start:web": "react-scripts start",
-    "build:styleguidist": "npx styleguidist build",
+    "build:docs": "npx styleguidist build",
     "build:web": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
