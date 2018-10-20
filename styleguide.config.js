@@ -34,7 +34,10 @@ module.exports = {
     },
     {
       name: 'Unit Page',
-      components: 'src/Components/Unit/*.js'
+      components: [
+        'src/Components/Unit/Profile.js',
+        'src/Components/Unit/Member.js',
+      ]
     }
   ],
   styleguideComponents: {
