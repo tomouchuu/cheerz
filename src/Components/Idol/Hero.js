@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const HeroArea = styled.section`
   width: 100%;
@@ -140,7 +141,7 @@ const IdolHero = () => (
         <FavouriteArea>
           <FavouriteCount>お気に入り登録<span>913</span>人</FavouriteCount>
           <FavouriteItem>
-            <FavouriteBtn href="/login" data-fav-action="add">お気に入りに登録</FavouriteBtn>
+            <FavouriteBtn href="/login" data-fav-action="add"><FontAwesomeIcon icon="star" /> お気に入りに登録</FavouriteBtn>
           </FavouriteItem>
         </FavouriteArea>
 

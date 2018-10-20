@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Title = styled.h3`
   font-size: 10px;
@@ -41,7 +42,7 @@ const FanDetail = styled.dd`
 
 const FanSidebar = () => (
   <div>
-    <Title>Fan Ranking</Title>
+    <Title><FontAwesomeIcon icon="trophy" /> Fan Ranking</Title>
     <Fans>
       <FanItem>
         <FanArea>

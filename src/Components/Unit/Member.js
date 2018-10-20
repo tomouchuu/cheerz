@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const MemberArea = styled.div`
   margin: 30px 0 0;
@@ -97,9 +98,9 @@ const Member = props => (
       }
       <FavouriteBtn href="#" id="favoriteBtn" data-poster-id={props.artistid} data-fav-action="add">お気に入りに登録</FavouriteBtn>
       <MemberStats>
-        <li className="cheerNum">{props.totalcheers}</li>
-        <li className="photo">{props.photos}</li>
-        <li className="favorite">{props.favourites}</li>
+        <li className="cheerNum"><FontAwesomeIcon icon="heart" /> {props.totalcheers}</li>
+        <li className="photo"><FontAwesomeIcon icon="image" /> {props.photos}</li>
+        <li className="favorite"><FontAwesomeIcon icon="star" /> {props.favourites}</li>
       </MemberStats>
       <MemberTxt>{props.text}</MemberTxt>
     </MemberProfile>

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MoreBtn } from './../Utils/Button';
 
 const Title = styled.h3`
@@ -19,7 +20,7 @@ const Thread = styled.li`
 
 const CommunitySidebar = () => (
   <div>
-    <Title>COMMUNITY</Title>
+    <Title><FontAwesomeIcon icon="comment-alt" /> COMMUNITY</Title>
     <Threads>
       <Thread>
         <a href="/artist/community/show/582846">おおおお（1）</a>

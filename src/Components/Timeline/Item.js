@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import { Link as RRLink } from 'react-router-dom';
 
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import VoiceIcon from './../Utils/VoiceIcon';
+
 import SupporterOnlyImg from './../../Images/supporter_only.png'
 
 const ItemArea = styled.div`
@@ -155,11 +159,13 @@ const Item = props => (
         }
         <IdolName><RRLink to={`/artist/${props.artistid}`}>{props.artist}</RRLink></IdolName>
       </IdolDetailArea>
-      <CheersCount id={`feedCheerCount${props.itemid}`}>{props.cheers}</CheersCount>
+      <CheersCount id={`feedCheerCount${props.itemid}`}><FontAwesomeIcon icon="heart" /> {props.cheers}</CheersCount>
     </ItemHead>
 
     <ItemPhoto>
-      <div className="voiceIcon"></div>
+      {
+        props.hasvoice ? <VoiceIcon /> : ''
+      }
       <div className="itemInfo"></div>
       <Photo issupporter={props.issupporter}>
         <RRLink to={`#item-${props.itemid}`} className="modal" data-item-id={props.itemid}>
@@ -188,7 +194,8 @@ Item.propTypes = {
   unit: PropTypes.string,
   cheers: PropTypes.number.isRequired,
   comment: PropTypes.string,
-  issupporter: PropTypes.bool
+  issupporter: PropTypes.bool,
+  hasvoice: PropTypes.bool
 }
 
 export default Item;

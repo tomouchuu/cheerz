@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faClock, faCrown, faFlag, faHeart, faHome, faNewspaper, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faCircle, faClock, faCommentAlt, faCrown, faFlag, faHeart, faHome, faImage, faKey, faNewspaper, faSearch, faStar, faTrophy } from '@fortawesome/free-solid-svg-icons';
 import { faQuestionCircle } from '@fortawesome/pro-regular-svg-icons';
 import { faVolume } from '@fortawesome/pro-solid-svg-icons';
 
@@ -20,7 +20,7 @@ import Unit from './Pages/Unit';
 import Artist from './Pages/Artist';
 import Search from './Pages/Search';
 
-library.add(faClock, faCrown, faFlag, faHeart, faHome, faNewspaper, faQuestionCircle, faSearch, faVolume);
+library.add(faCircle, faClock, faCommentAlt, faCrown, faFlag, faHeart, faHome, faImage, faKey, faNewspaper, faQuestionCircle, faSearch, faStar, faTrophy, faVolume);
 
 const App = () => (
   <Router>

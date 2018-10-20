@@ -31,6 +31,7 @@ const Timeline = props => (
           cheers={post.item.cheer_count}
           comment={post.item.comment}
           issupporter={post.item.blur_image_url ? true : false}
+          hasvoice={post.item.voice.id !== 0}
         />
       ))
     }

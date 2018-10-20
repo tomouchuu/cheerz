@@ -5,6 +5,7 @@ import { Link as RRLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Link from '../Utils/Link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ThumbnailLink = styled(Link)`
   a {
@@ -22,6 +23,13 @@ const ThumbnailLink = styled(Link)`
 const ImageDiv = styled.div`
   width: 100%;
   height: 100%;
+
+  svg {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    z-index: 10;
+  }
 
   :after {
     position: absolute;
@@ -63,6 +71,9 @@ const IdolThumbnail = props => {
           <RRLink to={`artist/${props.artistid}`}>
             <ImageDiv hasvoice={props.hasvoice}>
               <Image size={props.size} src={props.image} alt={props.artist} />
+              {
+                props.hasvoice ? <FontAwesomeIcon icon="volume" inverse size="2x" /> : ''
+              }
             </ImageDiv>
           </RRLink>
         </ThumbnailLink>
@@ -77,6 +88,9 @@ const IdolThumbnail = props => {
       <RRLink to={`artist/${props.artistid}`}>
         <ImageDiv hasvoice={props.hasvoice}>
           <Image size={props.size} src={props.image} alt={props.artist} />
+          {
+            props.hasvoice ? <FontAwesomeIcon icon="volume" inverse size="2x" /> : ''
+          }
         </ImageDiv>
         <Name>{props.artist}</Name>
       </RRLink>

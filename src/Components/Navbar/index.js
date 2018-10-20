@@ -68,15 +68,15 @@ const Navbar = props => (
     <Logo><RRLink to="/">CHEERZ</RRLink></Logo>
     <Nav>
       <ul>
-        <li><Link><NavLink exact to="/"><FontAwesomeIcon icon="home" /> HOME</NavLink></Link></li>
-        <li><Link><NavLink to="/timeline"><FontAwesomeIcon icon="clock" /> タイムライン</NavLink></Link></li>
-        <li><Link><NavLink to="/ranking"><FontAwesomeIcon icon="crown" /> ランキング</NavLink></Link></li>
-        <li><Link><NavLink to="/article"><FontAwesomeIcon icon="newspaper" /> 記事・コラム</NavLink></Link></li>
+        <li><Link><NavLink exact to="/"><FontAwesomeIcon icon="home" fixedWidth />&nbsp;HOME</NavLink></Link></li>
+        <li><Link><NavLink to="/timeline"><FontAwesomeIcon icon="clock" fixedWidth />&nbsp;タイムライン</NavLink></Link></li>
+        <li><Link><NavLink to="/ranking"><FontAwesomeIcon icon="crown" fixedWidth />&nbsp;ランキング</NavLink></Link></li>
+        <li><Link><NavLink to="/article"><FontAwesomeIcon icon="newspaper" fixedWidth />&nbsp;記事・コラム</NavLink></Link></li>
       </ul>
     </Nav>
     <Search placeholder="アーティスト・ユニット検索" color="#f4f6f8" />
     {
-      props.account ? <AccountNavbar account={props.account} /> : <LoginLink color="#f38ec3"><RRLink to="/login">LOGIN</RRLink></LoginLink>
+      props.account ? <AccountNavbar account={props.account} /> : <LoginLink color="#f38ec3"><RRLink to="/login"><FontAwesomeIcon icon="key" fixedWidth /> LOGIN</RRLink></LoginLink>
     }
   </NavContainer>
 );
