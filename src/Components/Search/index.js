@@ -30,6 +30,8 @@ const SearchIcon = styled(FontAwesomeIcon)`
   color: #bcc6cf;
 `;
 
+const baseurl = (process.env.NODE_ENV === 'production') ? '/app/' : '/';
+
 /**
  * Search Form
  */
@@ -56,7 +58,7 @@ class Search extends Component {
   render() {
     return (
       <SearchBox>
-        <form method="GET" action="/search">
+        <form method="GET" action={`${baseurl}search`}>
           <SearchIcon icon="search" />
           <SearchInput type="text" name="keyword" color={this.props.color} placeholder={this.props.placeholder} value={this.state.keyword}
           onChange={this.handleInputChange} />

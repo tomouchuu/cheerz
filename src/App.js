@@ -22,8 +22,10 @@ import Search from './Pages/Search';
 
 library.add(faCircle, faClock, faCommentAlt, faCrown, faFlag, faHeart, faHome, faImage, faKey, faNewspaper, faQuestionCircle, faSearch, faStar, faTrophy, faVolume);
 
+const baseurl = (process.env.NODE_ENV === 'production') ? '/app' : '/';
+
 const App = () => (
-  <Router>
+  <Router basename={baseurl}>
     <ContentArea>
       <Header>
         <Navbar account={{image: "https://d1jo5b1m9v3ic.cloudfront.net/user/profile/u298960fd1fabaada9837b2feec5d27bc0dee1eb-small.jpg"}} />
@@ -33,7 +35,7 @@ const App = () => (
       <Route path="/timeline" component={Timeline} />
       <Route path="/unit/:id" component={Unit} />
       <Route path="/artist/:id" component={Artist} />
-      <Route path="/search/:keyword" component={Search} />
+      <Route path="/search" component={Search} />
     </ContentArea>
   </Router>
 )

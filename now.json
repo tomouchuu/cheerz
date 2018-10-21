@@ -1,0 +1,32 @@
+{
+  "alias": "cheerz.uchuu.io",
+  "files": [
+    ".npmrc",
+    "styleguide.config.js",
+    "package.json",
+    "yarn.lock",
+    "Dockerfile",
+    "public",
+    "src"
+  ],
+  "forwardNpm": true,
+  "type": "static",
+  "static": {
+    "cleanUrls": [
+      "/app/**"
+    ],
+    "redirects": [
+      { "source": "/", "destination": "/app" }
+    ],
+    "rewrites": [
+      {
+        "source": "app/**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "docs/**",
+        "destination": "/docs/index.html"
+      }
+    ]
+  }
+}
