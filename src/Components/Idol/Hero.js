@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -127,15 +128,15 @@ const IdolHero = () => (
     <HeroContainer>
       <IdolDetails>
         <IdolThumb>
-          <a href="/artist/4940">
+          <Link to="/artist/4940">
             <img src="https://d1jo5b1m9v3ic.cloudfront.net/poster/profile/p4940/db7db9f905bfa9d8b69c454d81b922e4-large.jpg" alt="ao yamato" />
-          </a>
+          </Link>
         </IdolThumb>
         <IdolProfile>
           <UnitName>
-            <a href="/unit/728">Niji no Conquistador</a>
+            <Link to="/unit/728">Niji no Conquistador</Link>
           </UnitName>
-          <IdolName><a href="/artist/4940">ao yamato</a></IdolName>
+          <IdolName><Link to="/artist/4940">ao yamato</Link></IdolName>
           <IdolRomanji>ao yamato</IdolRomanji>
           <p className="profileInfo"></p>
         </IdolProfile>

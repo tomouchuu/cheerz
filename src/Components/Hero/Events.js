@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -62,7 +63,7 @@ const Events = props => (
   <EventsArea issignedin={props.issignedin}>
     <EventTitle>
       <h3><FontAwesomeIcon icon="flag" /> EVENT</h3>
-      <a href="/ranking">MORE</a>
+      <Link to="/ranking">MORE</Link>
     </EventTitle>
     <EventList>
       <li>

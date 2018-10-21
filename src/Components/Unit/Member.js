@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -84,13 +86,13 @@ const MemberTxt = styled.p`
 const Member = props => (
   <MemberArea>
     <MemberThumbnail>
-      <a href={`/artist/${props.artistid}`}>
+      <Link to={`/artist/${props.artistid}`}>
         <img src={props.artistimage} alt={props.artist} />
-      </a>
+      </Link>
     </MemberThumbnail>
     <MemberProfile>
       <MemberName>
-        <a href={`/artist/${props.artistid}`}>{props.artist}</a>
+        <Link to={`/artist/${props.artistid}`}>{props.artist}</Link>
       </MemberName>
       <MemberRomanji>{props.artistromanji}</MemberRomanji>
       {
