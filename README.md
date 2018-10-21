@@ -9,6 +9,7 @@ It's been a very long time since I did a website rebuild and I found it immensel
 ## Links
 
 Main Site: https://cheerz.uchuu.io/app
+
 Docs Site: https://cheerz.uchuu.io/docs
 
 ## Tech
