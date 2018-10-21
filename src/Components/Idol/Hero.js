@@ -43,6 +43,10 @@ const IdolThumb = styled.div`
     border-radius: 50%;
     overflow: hidden;
   }
+
+  a:hover {
+    opacity: 1;
+  }
 `;
 const IdolProfile = styled.div`
   margin: 20px 0 0;
@@ -124,7 +128,7 @@ const IdolHero = () => (
       <IdolDetails>
         <IdolThumb>
           <a href="/artist/4940">
-            <img src="https://d1jo5b1m9v3ic.cloudfront.net/poster/profile/p4940/db7db9f905bfa9d8b69c454d81b922e4-large.jpg" />
+            <img src="https://d1jo5b1m9v3ic.cloudfront.net/poster/profile/p4940/db7db9f905bfa9d8b69c454d81b922e4-large.jpg" alt="ao yamato" />
           </a>
         </IdolThumb>
         <IdolProfile>
@@ -148,7 +152,7 @@ const IdolHero = () => (
         <ProfileText>
           虹のコンキスタドール大和明桜だわアーオ♪
           女子高生1年目 身長162 握力 右29 左28
-          4946レボリューション💫
+          4946レボリューション<span aria-label="revolution" role="img">💫</span>
         </ProfileText>
       </Profile>
     </HeroContainer>

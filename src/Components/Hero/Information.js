@@ -83,7 +83,7 @@ const Information = props => (
           1件のお気に入り投稿がありました（1pt）<br/>
           1人の投稿を見ました（1pt）<br/>
           <span>※今日は1人の投稿をみてます</span>
-          <InfoButton href="#" onclick="pointGet()">合計2ptを受け取る</InfoButton>
+          <InfoButton href="#">合計2ptを受け取る</InfoButton>
         </BonusPointsInfo>
       </BonusPoints>
     </li>

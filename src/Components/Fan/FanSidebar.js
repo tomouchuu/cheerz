@@ -46,7 +46,7 @@ const FanSidebar = () => (
     <Fans>
       <FanItem>
         <FanArea>
-          <FanImg><img src="https://d1jo5b1m9v3ic.cloudfront.net/user/profile/u298985fbbe6a60d721f19a08ac50e5154bc8e54-small.jpg" /></FanImg>
+          <FanImg><img src="https://d1jo5b1m9v3ic.cloudfront.net/user/profile/u298985fbbe6a60d721f19a08ac50e5154bc8e54-small.jpg" alt="えいる" /></FanImg>
           <FanDetail>
             えいる<br/>
             <span>1282 cheer</span>
