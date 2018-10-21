@@ -18,6 +18,16 @@ const SearchInput = styled.input`
   box-shadow: none;
   padding: 7px 30px;
   font-size: 11px;
+
+  ::placeholder {
+    color: #bcc6cf;
+  }
+`;
+const SearchIcon = styled(FontAwesomeIcon)`
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  color: #bcc6cf;
 `;
 
 /**
@@ -47,6 +57,7 @@ class Search extends Component {
     return (
       <SearchBox>
         <form method="GET" action="/search">
+          <SearchIcon icon="search" />
           <SearchInput type="text" name="keyword" color={this.props.color} placeholder={this.props.placeholder} value={this.state.keyword}
           onChange={this.handleInputChange} />
         </form>
