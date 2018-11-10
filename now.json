@@ -7,6 +7,7 @@
   ],
   "routes": [
     { "src": "/docs/(.*)", "dest": "/styleguide/$1" },
+    { "src": "/docs", "dest": "/styleguide/index.html" },
     { "src": "/(.*)", "dest": "/build/$1" }
   ],
   "regions": ["bru"]
