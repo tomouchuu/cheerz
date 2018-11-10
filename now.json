@@ -1,32 +1,13 @@
 {
+  "version": 2,
   "alias": "cheerz.uchuu.io",
-  "files": [
-    ".npmrc",
-    "styleguide.config.js",
-    "package.json",
-    "yarn.lock",
-    "Dockerfile",
-    "public",
-    "src"
+  "builds": [
+    { "src": "./build/**/*", "use": "@now/static" },
+    { "src": "./styleguide/**/*", "use": "@now/static" }
   ],
-  "forwardNpm": true,
-  "type": "static",
-  "static": {
-    "cleanUrls": [
-      "/app/**"
-    ],
-    "redirects": [
-      { "source": "/", "destination": "/app" }
-    ],
-    "rewrites": [
-      {
-        "source": "app/**",
-        "destination": "/index.html"
-      },
-      {
-        "source": "docs/**",
-        "destination": "/docs/index.html"
-      }
-    ]
-  }
+  "routes": [
+    { "src": "/docs/(.*)", "dest": "/styleguide/$1" },
+    { "src": "/(.*)", "dest": "/build/$1" }
+  ],
+  "regions": ["bru"]
 }

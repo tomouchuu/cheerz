@@ -1,7 +1,0 @@
-*
-!src
-!public
-!.npmrc
-!package.json
-!styleguide.config.js
-!yarn.lock

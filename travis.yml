@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - "node"
+cache:
+  directories:
+    - "node_modules"
+script: npm run build
+before_deploy: npm install now --no-save # Install Now CLI on Travis
+deploy:
+  # deploy master to production
+  - provider: script
+  script: now --token $NOW_TOKEN
+  skip_cleanup: true
+  on:
+    all_branches: true
+    condition: $TRAVIS_BRANCH != "master"
+  # deploy master to production
+  - provider: script
+  script: now --token $NOW_TOKEN && now alias --token $NOW_TOKEN
+  skip_cleanup: true
+  on:
+    branch: master
