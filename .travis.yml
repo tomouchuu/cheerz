@@ -8,12 +8,12 @@ cache:
 script: npm run build
 before_deploy: npm install now --no-save
 deploy:
-  - provider: script
+  provider: script
   script: now --token $NOW_TOKEN
   skip_cleanup: true
   on:
     condition: branch != master
-  - provider: script
+  provider: script
   script: now --token $NOW_TOKEN && now alias --token $NOW_TOKEN
   skip_cleanup: true
   on:
