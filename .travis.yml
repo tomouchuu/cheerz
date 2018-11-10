@@ -8,9 +8,3 @@ cache:
     - "node_modules"
 script: npm run build
 before_deploy: npm install now --no-save
-deploy:
-  - provider: script
-  script: now --token $NOW_TOKEN
-  skip_cleanup: true
-  on:
-    condition: $TRAVIS_BRANCH != "master"
